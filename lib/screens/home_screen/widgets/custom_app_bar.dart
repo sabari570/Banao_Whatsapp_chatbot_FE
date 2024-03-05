@@ -6,7 +6,7 @@ import 'package:whatsapp_chatbot_fe/utils/utils.dart';
 AppBar customAppBar() => AppBar(
       // leading: Icon(Icons.menu),
       title: Text(
-        'SnehAI',
+        'GovQuery',
         style: Constants.subHeadTextStyle,
       ),
       centerTitle: true,

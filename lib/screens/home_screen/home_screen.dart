@@ -14,10 +14,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: CustomColors.bgColor,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: CustomColors.pureWhite,
         onPressed: () {},
         elevation: 1,
-        child: Icon(
-          FontAwesomeIcons.robot,
+        child: Image.asset(
+          'assets/logo.png',
+          height: 40.w,
+          width: 40.w,
         ),
       ),
       appBar: customAppBar(),
@@ -26,7 +29,7 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Hi!\n I am SnehAI",
+            "Hi!\n I am GovQuery",
             style: Constants.mainHeadTextStyle,
           ),
           Column(
@@ -37,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                 style: Constants.subHeadTextStyle,
               ).paddingForOnly(top: 30.w),
               Text(
-                'SnehAI is an Artificial Intelligence-powered chatbot,The chatbot could help students who are seeking government jobs because the data around these jobs are scattered in different sites and different website or the data they get from the coaching centers magazines.',
+                'GovQuery is an Artificial Intelligence-powered chatbot,The chatbot could help students who are seeking government jobs because the data around these jobs are scattered in different sites and different website or the data they get from the coaching centers magazines.',
                 style: Constants.contextTextStyle,
               ).paddingForOnly(top: 15.w),
               LetsChatOnWhatsApp().paddingForOnly(top: 100.w).asButton(),
