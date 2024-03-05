@@ -1,7 +1,7 @@
 import 'package:api_repository/api_repository.dart';
 
 class AuthRepo {
-  final ApiClient _client;
+  final GovQueryApiClient _client;
 
   AuthRepo(this._client);
 }

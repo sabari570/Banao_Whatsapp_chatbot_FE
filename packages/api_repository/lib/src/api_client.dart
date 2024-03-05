@@ -1,1 +1,1 @@
-class ApiClient {}
+class GovQueryApiClient {}

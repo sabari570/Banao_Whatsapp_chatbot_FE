@@ -7,7 +7,7 @@ import 'package:user_repository/user_repository.dart';
 import 'package:whatsapp_chatbot_fe/screens/home_screen/home_screen.dart';
 
 void main() {
-  final client = ApiClient();
+  final client = GovQueryApiClient();
   runApp(MyApp(
     authRepo: AuthRepo(client),
     userRepo: UserRepo(client),
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         designSize: const Size(360, 640),
         builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Whatsapp Chatbot',
+          title: 'GovQuery',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,

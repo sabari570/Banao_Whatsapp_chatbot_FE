@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:whatsapp_chatbot_fe/screens/home_screen/widgets/custom_app_bar.dart';
 import 'package:whatsapp_chatbot_fe/screens/home_screen/widgets/lets_chat_button.dart';
 import 'package:whatsapp_chatbot_fe/utils/extensions/widget_extensions.dart';
