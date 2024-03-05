@@ -1,16 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:whatsapp_chatbot_fe/screens/home_screen/widgets/custom_app_bar.dart';
+import 'package:whatsapp_chatbot_fe/screens/home_screen/widgets/lets_chat_button.dart';
+import 'package:whatsapp_chatbot_fe/utils/extensions/widget_extensions.dart';
+import 'package:whatsapp_chatbot_fe/utils/utils.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          "Welcome to Whatsapp ChatBot",
+    return Scaffold(
+      backgroundColor: CustomColors.bgColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        elevation: 1,
+        child: Icon(
+          FontAwesomeIcons.robot,
         ),
       ),
+      appBar: customAppBar(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            "Hi!\n I am SnehAI",
+            style: Constants.mainHeadTextStyle,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Let\’s talk about things that matter to you!',
+                style: Constants.subHeadTextStyle,
+              ).paddingForOnly(top: 30.w),
+              Text(
+                'SnehAI is an Artificial Intelligence-powered chatbot,The chatbot could help students who are seeking government jobs because the data around these jobs are scattered in different sites and different website or the data they get from the coaching centers magazines.',
+                style: Constants.contextTextStyle,
+              ).paddingForOnly(top: 15.w),
+              LetsChatOnWhatsApp().paddingForOnly(top: 100.w).asButton(),
+            ],
+          )
+        ],
+      ).paddingWithSymmetry(horizontal: 16.w, vertical: 8.w).wrapCenter(),
     );
   }
 }

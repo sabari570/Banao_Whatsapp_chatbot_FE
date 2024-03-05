@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         designSize: const Size(360, 640),
         builder: (context, child) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Whatsapp Chatbot',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
