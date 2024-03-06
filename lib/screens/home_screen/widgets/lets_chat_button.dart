@@ -15,26 +15,26 @@ class LetsChatOnWhatsApp extends StatelessWidget {
       children: [
         Card(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24.r),
+            borderRadius: BorderRadius.circular(24),
           ),
           child: Container(
-            height: 40.w,
+            height: 40,
             decoration: BoxDecoration(
               color: CustomColors.pureWhite,
-              borderRadius: BorderRadius.circular(24.r),
+              borderRadius: BorderRadius.circular(24),
             ),
             child: Align(
               alignment: Alignment.center,
               child: Text(
                 'LET\'S CHAT ON WHATSAPP',
                 style: Constants.letsChatOnWhatsappTextStyle,
-              ),
+              ).paddingForOnly(left: 25.w),
             ),
           ),
         ),
         Positioned(
           child: CircleAvatar(
-            radius: 25.r,
+            radius: 25,
             backgroundColor: CustomColors.bgColor,
             child: Image.asset("assets/images/whatsapp_icon.png"),
           ),
@@ -43,6 +43,7 @@ class LetsChatOnWhatsApp extends StatelessWidget {
     ).paddingForOnly(
       top: 10.h,
       right: 30.w,
+      bottom: 10.h,
     );
   }
 }
